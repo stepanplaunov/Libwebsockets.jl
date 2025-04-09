@@ -781,7 +781,7 @@ function lws_tls_session_dump_load(vh, host, port, cb_load, opq)
 end
 
 function lws_sul_schedule(ctx, tsi, sul, _cb, _us)
-    ccall((:lws_sul_schedule, libwebsockets), Cvoid, (Ptr{LwsContext}, Cint, Ptr{LwsSortedUsecList}, Ptr{Cvoid}, Cuint), ctx, tsi, sul, _cb, _us)
+    ccall((:lws_sul_schedule, libwebsockets), Cvoid, (Ptr{LwsContext}, Cint, Ptr{LwsSortedUsecList}, Ptr{Cvoid}, Cint), ctx, tsi, sul, _cb, _us)
 end
 
 function lws_retry_sul_schedule(context, tid, sul, retry, cb, ctry)
